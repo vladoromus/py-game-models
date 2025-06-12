@@ -16,7 +16,9 @@ def main() -> None:
             Skill.objects.get_or_create(
                 name=skill_data["name"],
                 race=race,
-                defaults={"bonus": skill_data["bonus"]}
+                defaults={
+                    "bonus": skill_data["bonus"]
+                }
             )
 
         guild_data = pdata.get("guild")
